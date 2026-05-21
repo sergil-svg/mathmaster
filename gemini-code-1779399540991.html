@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathMaster Recovery 2026</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <nav class="sidebar glass-panel">
+            <div class="logo"><i class="fas fa-infinity"></i> MathMaster</div>
+            <div class="progress-widget">
+                <p>Progreso Global: <span id="global-progress">0</span>%</p>
+                <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+                <p><i class="fas fa-fire"></i> Racha: <span id="streak-days">0</span> días</p>
+            </div>
+            <ul id="theme-list" class="nav-list"></ul>
+            <button id="btn-exam" class="btn-primary mt-auto"><i class="fas fa-stopwatch"></i> Simulacro Examen</button>
+        </nav>
+
+        <main class="content-area">
+            <header class="top-nav glass-panel">
+                <h1 id="current-title">Bienvenido a tu Recuperación</h1>
+                <div class="stats"><span><i class="fas fa-clock"></i> <span id="time-studied">0</span> min</span></div>
+            </header>
+            <div id="content-display" class="content-body glass-panel scrollable">
+                <div class="welcome-screen">
+                    <h2>¿Listo para el 10?</h2>
+                    <p>Selecciona un tema en el menú lateral para empezar a estudiar.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div class="ai-widget">
+        <button id="ai-toggle" class="ai-btn"><i class="fas fa-robot"></i></button>
+        <div id="ai-chat" class="ai-chat glass-panel hidden">
+            <div class="ai-header">
+                <h3>Tutor IA</h3>
+                <button id="ai-settings-btn"><i class="fas fa-cog"></i></button>
+            </div>
+            <div id="ai-settings" class="ai-settings hidden">
+                <label>API Key (Se guarda en tu PC):</label>
+                <input type="password" id="api-key-input" placeholder="sk-...">
+                <button id="save-api-key" class="btn-small">Guardar</button>
+            </div>
+            <div id="chat-messages" class="chat-messages">
+                <div class="msg ai">¡Hola! Soy tu tutor experto en matemáticas. Pregúntame si te atascas.</div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chat-input" placeholder="Pregunta algo...">
+                <button id="send-msg"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
